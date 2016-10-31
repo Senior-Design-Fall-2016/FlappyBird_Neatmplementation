@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1bd332c-25f4-4925-aa4a-d63aad5f87b2" name="Default" comment="" />
+    <list default="true" id="c1bd332c-25f4-4925-aa4a-d63aad5f87b2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="NEATFlappyBird-master.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,7 +36,10 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
                   <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-                  <folding />
+                  <folding>
+                    <element signature="e#183#184#0" expanded="false" />
+                    <element signature="e#237#238#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -42,7 +47,7 @@
           <file leaf-file-name="Conn.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Conn.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
+                <state relative-caret-position="120">
                   <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -54,7 +59,7 @@
           <file leaf-file-name="Network.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Network.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="699">
+                <state relative-caret-position="705">
                   <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -68,7 +73,7 @@
           <file leaf-file-name="Species.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Species.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="105">
                   <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -80,7 +85,7 @@
           <file leaf-file-name="GenerationController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/GenerationController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="54">
+                <state relative-caret-position="285">
                   <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -99,8 +104,8 @@
           <file leaf-file-name="GenStats.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GenStats.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="749">
-                  <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+                <state relative-caret-position="329">
+                  <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -133,7 +138,7 @@
           <file leaf-file-name="Genome.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Genome.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
+                <state relative-caret-position="45">
                   <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -145,7 +150,7 @@
           <file leaf-file-name="Species.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Species.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
+                <state relative-caret-position="90">
                   <caret line="10" column="40" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -157,8 +162,8 @@
           <file leaf-file-name="Pool.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Pool.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-571">
-                  <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+                <state relative-caret-position="359">
+                  <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#initializePool#0;class#Pool#0" expanded="false" />
@@ -170,7 +175,7 @@
           <file leaf-file-name="NEATFlappyBird.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/NEATFlappyBird.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
+                <state relative-caret-position="3990">
                   <caret line="304" column="49" selection-start-line="304" selection-start-column="49" selection-end-line="304" selection-end-column="49" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -189,6 +194,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -270,8 +278,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,6 +288,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.NEATFlappyBird">
     <configuration default="false" name="NEATFlappyBird" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -744,20 +753,20 @@
       <workItem from="1477610131381" duration="16106000" />
       <workItem from="1477856318735" duration="2571000" />
       <workItem from="1477930920236" duration="977000" />
-      <workItem from="1477931919286" duration="7383000" />
+      <workItem from="1477931919286" duration="7669000" />
+      <workItem from="1477946424415" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27680000" />
+    <option name="totallyTimeSpent" value="27967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1337" height="873" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15364917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -767,7 +776,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08339769" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08339769" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24942085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -778,6 +787,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15364917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.007002801" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -936,7 +946,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#183#184#0" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,7 +1056,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#183#184#0" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,7 +1185,7 @@
     <entry file="file://$PROJECT_DIR$/bdir.png" />
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Conn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="120">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1181,13 +1197,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#183#184#0" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Network.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
+        <state relative-caret-position="705">
           <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1199,7 +1218,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/Species.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="105">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1225,7 +1244,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/NewCode/GenerationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="285">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1238,17 +1257,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GenStats.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Genome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="45">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1258,7 +1269,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Species.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="90">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1268,7 +1279,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/NEATFlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="3990">
           <caret line="304" column="49" selection-start-line="304" selection-start-column="49" selection-end-line="304" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1278,12 +1289,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Pool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-571">
-          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+        <state relative-caret-position="359">
+          <caret line="148" column="33" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initializePool#0;class#Pool#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenStats.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
