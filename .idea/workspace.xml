@@ -93,14 +93,24 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="NEATFlappyBird.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="NEATFlappyBird.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/NEATFlappyBird.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
+                <state relative-caret-position="193">
+                  <caret line="189" column="50" selection-start-line="189" selection-start-column="50" selection-end-line="189" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GenStats.txt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/GenStats.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -195,6 +205,7 @@
         <option value="$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Pool.java" />
         <option value="$PROJECT_DIR$/src/fr/neatmonster/labs/neat/Genome.java" />
         <option value="$PROJECT_DIR$/src/fr/neatmonster/labs/NEATFlappyBird.java" />
+        <option value="$PROJECT_DIR$/GenStats.txt" />
       </list>
     </option>
   </component>
@@ -792,12 +803,12 @@
       <workItem from="1477610131381" duration="16106000" />
       <workItem from="1477856318735" duration="2571000" />
       <workItem from="1477930920236" duration="977000" />
-      <workItem from="1477931919286" duration="586000" />
+      <workItem from="1477931919286" duration="1389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20883000" />
+    <option name="totallyTimeSpent" value="21686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -1330,21 +1341,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GenStats.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/neatmonster/labs/NEATFlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
+        <state relative-caret-position="193">
+          <caret line="189" column="50" selection-start-line="189" selection-start-column="50" selection-end-line="189" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenStats.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
