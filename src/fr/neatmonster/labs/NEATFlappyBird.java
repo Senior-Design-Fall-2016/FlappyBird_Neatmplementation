@@ -44,13 +44,8 @@ import fr.neatmonster.labs.neat.Synapse;
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
     int genNum = 0;
-    File file = new File("GenStats.txt");
-
-    file.createNewFile();
-    FileWriter writer = new FileWriter(file);
-    writer.write("Generation,Score");
-    writer.flush();
-
+    static File file;
+    static FileWriter writer;
 
     private static class Bird {
         private static Map<Species, BufferedImage[]> cache = new WeakHashMap<Species, BufferedImage[]>();
@@ -186,6 +181,19 @@ public class NEATFlappyBird extends JPanel implements Runnable {
     }
 
     public static void main(final String[] args) {
+        file = new File("GenStats.txt");
+        try{
+            writer = new FileWriter(file);
+            writer.write("Generation,Score\n");
+            writer.flush();
+        }
+        catch(IOException ex){
+        }
+
+
+       // writer.write("Generation,Score");
+       // writer.flush();
+
         final JFrame frame = new JFrame();
         frame.setResizable(false);
         frame.setTitle("NEATFlappyBird");
@@ -285,8 +293,13 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         }
 
         if (allDead) {
-            writer.write(genNum + "," + Pool.maxFitness);
-            writer.flush();
+            try{
+                writer.write(genNum + "," + Pool.maxFitness + "\n");
+                writer.flush();
+            }
+            catch(IOException ex){
+            }
+
             System.out.println(genNum + "," + Pool.maxFitness);
             genNum++;
             Pool.newGeneration();
