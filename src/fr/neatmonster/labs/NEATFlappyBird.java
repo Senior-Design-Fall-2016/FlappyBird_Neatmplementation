@@ -44,11 +44,13 @@ import fr.neatmonster.labs.neat.Synapse;
 
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
-    int genNum = 0;
+    static int genNum = 0;
+    static boolean bool = true;
     static File file;
     static FileWriter writer;
     static Date date ;//= new Date();
-
+    static final JFrame frame = new JFrame();
+    static final NEATFlappyBird neat = new NEATFlappyBird();
 
     private static class Bird {
         private static Map<Species, BufferedImage[]> cache = new WeakHashMap<Species, BufferedImage[]>();
@@ -182,7 +184,6 @@ public class NEATFlappyBird extends JPanel implements Runnable {
                 .getVisualBounds().getHeight();
         return new Dimension(width, height);
     }
-
     public static void main(final String[] args) {
         date = new Date();
         //file = new File("GenStats.txt", true);
@@ -193,24 +194,20 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         }
         catch(IOException ex){
         }
-
-
-       // writer.write("Generation,Score");
-       // writer.flush();
-
-        final JFrame frame = new JFrame();
+        // writer.write("Generation,Score");
+        // writer.flush();
+        //final JFrame frame = new JFrame();
         frame.setResizable(false);
         frame.setTitle("NEATFlappyBird");
         frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        final NEATFlappyBird neat = new NEATFlappyBird();
+        //final NEATFlappyBird neat = new NEATFlappyBird();
         frame.add(neat);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         neat.run();
     }
-
     private static BufferedImage toBufferedImage(final Image image) {
         final BufferedImage buffered = new BufferedImage(image.getWidth(null),
                 image.getHeight(null), BufferedImage.TYPE_INT_ARGB);
@@ -303,7 +300,12 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             }
             catch(IOException ex){
             }
-
+            if(genNum == 40){
+                System.out.println("aduasdhsabfhjdshjfdbhfjsndhfagbsajfsghfnsdhfabasjfsavhfnsahfbshjfbshkafbadshjfbsahdjf" +
+                        "\nfsbadhfabhfdbsahfbasdhfbsadhjfbadshkfbdsajhfbsahjfbashafbsdjhfbsajafnjsadfdsjafndsajfbsadfnashjfbasl");
+                frame.remove(neat);
+                bool = false;
+            }
             System.out.println(genNum + "," + Pool.maxFitness);
             genNum++;
             Pool.newGeneration();
@@ -470,7 +472,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         Pool.initializePool();
 
         initializeGame();
-        while (true) {
+        while (bool) {
             eval();
             update();
             learn();
