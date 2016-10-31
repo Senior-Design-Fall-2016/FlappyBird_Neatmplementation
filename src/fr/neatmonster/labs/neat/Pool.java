@@ -66,6 +66,7 @@ public class Pool {
         }
     }
 
+
     public static void initializePool() {
         for (int i = 0; i < POPULATION; ++i) {
             final Genome basic = new Genome();
@@ -163,7 +164,7 @@ public class Pool {
         species.addAll(survived);
     }
 
-    public static double totalAverageFitness() {
+    public static double totalFitness() {
         double total = 0;
         for (final Species species : Pool.species)
             total += species.averageFitness;

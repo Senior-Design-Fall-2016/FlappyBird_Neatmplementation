@@ -1,9 +1,5 @@
 package fr.neatmonster.labs;
 
-import static fr.neatmonster.labs.neat.Pool.INPUTS;
-import static fr.neatmonster.labs.neat.Pool.OUTPUTS;
-import static fr.neatmonster.labs.neat.Pool.POPULATION;
-
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -41,6 +37,8 @@ import fr.neatmonster.labs.neat.Neuron;
 import fr.neatmonster.labs.neat.Pool;
 import fr.neatmonster.labs.neat.Species;
 import fr.neatmonster.labs.neat.Synapse;
+
+import static fr.neatmonster.labs.neat.Pool.*;
 
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
@@ -295,18 +293,28 @@ public class NEATFlappyBird extends JPanel implements Runnable {
 
         if (allDead) {
             try{
-                writer.write(genNum + "," + Pool.maxFitness + "\n");
+                //Thread.sleep(10);
+                final int val =  Pool.species.size() - 1;
+               // Species pop = Pool.species.get((val));
+               // double generationFitness = 0;
+               // for(Genome agent : pop.genomes){
+               //     System.out.println(pop.genomes.size());
+               //     if(generationFitness < agent.fitness)
+               //         generationFitness = agent.fitness;
+               // }
+                writer.write(genNum + "," + Pook.totalFitness + "\n");
                 writer.flush();
             }
             catch(IOException ex){
             }
-            if(genNum == 40){
-                System.out.println("aduasdhsabfhjdshjfdbhfjsndhfagbsajfsghfnsdhfabasjfsavhfnsahfbshjfbshkafbadshjfbsahdjf" +
+//            catch(InterruptedException ex){}
+            if(genNum == 100){
+                System.out.println(" Boobies aduasdhsabfhjdshjfdbhfjsndhfagbsajfsghfnsdhfabasjfsavhfnsahfbshjfbshkafbadshjfbsahdjf" +
                         "\nfsbadhfabhfdbsahfbasdhfbsadhjfbadshkfbdsajhfbsahjfbashafbsdjhfbsajafnjsadfdsjafndsajfbsadfnashjfbasl");
                 frame.remove(neat);
                 bool = false;
             }
-            System.out.println(genNum + "," + Pool.maxFitness);
+            //System.out.println(genNum + "," + Pool.species.topFitness);
             genNum++;
             Pool.newGeneration();
             initializeGame();
