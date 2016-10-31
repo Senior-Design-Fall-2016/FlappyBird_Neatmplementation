@@ -34,6 +34,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import java.io.*;
+import java.util.*;
 
 import fr.neatmonster.labs.neat.Genome;
 import fr.neatmonster.labs.neat.Neuron;
@@ -46,6 +47,8 @@ public class NEATFlappyBird extends JPanel implements Runnable {
     int genNum = 0;
     static File file;
     static FileWriter writer;
+    static Date date ;//= new Date();
+
 
     private static class Bird {
         private static Map<Species, BufferedImage[]> cache = new WeakHashMap<Species, BufferedImage[]>();
@@ -181,10 +184,11 @@ public class NEATFlappyBird extends JPanel implements Runnable {
     }
 
     public static void main(final String[] args) {
-        file = new File("GenStats.txt");
+        date = new Date();
+        //file = new File("GenStats.txt", true);
         try{
-            writer = new FileWriter(file);
-            writer.write("Generation,Score\n");
+            writer = new FileWriter("GenStats.txt", true);
+            writer.write(date.toString() + " ----------------------------------------- \n");
             writer.flush();
         }
         catch(IOException ex){
