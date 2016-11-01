@@ -139,11 +139,11 @@ public class Genome {
         while (prob > 0) {
             if (rnd.nextDouble() < prob)
                 mutateLink(true);
-            else{
+           /* else{
                 //System.out.println("Remove Link");
                 int i = rand_generator.nextInt((genes.size()));
                 removeLink(i);
-            }
+            }*/
             --prob;
         }
 
@@ -151,11 +151,11 @@ public class Genome {
         while (prob > 0) {
             if (rnd.nextDouble() < prob)
                 mutateNode();
-            else{
+            /*else{
                 //System.out.println("Remove Node");
                 int i = rand_generator.nextInt((genes.size()));
                 removeNode(i);
-            }
+            }*/
             --prob;
         }
 

@@ -10,6 +10,7 @@ import java.awt.Image;
 import java.awt.Polygon;
 import java.awt.RenderingHints;
 import java.awt.Shape;
+import java.awt.event.WindowEvent;
 import java.awt.font.GlyphVector;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.GeneralPath;
@@ -43,12 +44,14 @@ import static fr.neatmonster.labs.neat.Pool.*;
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
     static int genNum = 0;
+    static double val = 0.0;
+    static double totalVal = 0.0;
     static boolean bool = true;
     static File file;
     static FileWriter writer;
     static Date date ;//= new Date();
-    static final JFrame frame = new JFrame();
-    static final NEATFlappyBird neat = new NEATFlappyBird();
+    static JFrame frame = new JFrame();
+    static NEATFlappyBird neat = new NEATFlappyBird();
 
     private static class Bird {
         private static Map<Species, BufferedImage[]> cache = new WeakHashMap<Species, BufferedImage[]>();
@@ -183,28 +186,35 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         return new Dimension(width, height);
     }
     public static void main(final String[] args) {
-        date = new Date();
-        //file = new File("GenStats.txt", true);
-        try{
-            writer = new FileWriter("GenStats.txt", true);
-            writer.write(date.toString() + " ----------------------------------------- \n");
-            writer.flush();
+        for(int i = 0; i < 10; i++) {
+            bool = true;
+            date = new Date();
+            //file = new File("GenStats.txt", true);
+            try {
+                writer = new FileWriter("GenStats.txt", true);
+                writer.write(date.toString() + " ----------------------------------------- \n");
+                writer.flush();
+            } catch (IOException ex) {
+            }
+            // writer.write("Generation,Score");
+            // writer.flush();
+            //final JFrame frame = new JFrame();
+            //frame = new JFrame();
+            neat = new NEATFlappyBird();
+            Pool.destroyPool();
+            Pool.generation = 0;
+
+            frame.setResizable(false);
+            frame.setTitle("NEATFlappyBird");
+            frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            //final NEATFlappyBird neat = new NEATFlappyBird();
+            frame.add(neat);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            neat.run();
         }
-        catch(IOException ex){
-        }
-        // writer.write("Generation,Score");
-        // writer.flush();
-        //final JFrame frame = new JFrame();
-        frame.setResizable(false);
-        frame.setTitle("NEATFlappyBird");
-        frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //final NEATFlappyBird neat = new NEATFlappyBird();
-        frame.add(neat);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        neat.run();
     }
     private static BufferedImage toBufferedImage(final Image image) {
         final BufferedImage buffered = new BufferedImage(image.getWidth(null),
@@ -283,39 +293,31 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             double fitness = ticks - bird.flaps * 1.5;
             fitness = fitness == 0.0 ? -1.0 : fitness;
 
+            if(val < fitness)
+                val = fitness;
             bird.genome.fitness = fitness;
             if (fitness > Pool.maxFitness)
                 Pool.maxFitness = fitness;
-
             if (fitness > best.genome.fitness)
                 best = bird;
         }
-
         if (allDead) {
             try{
-                //Thread.sleep(10);
-                final int val =  Pool.species.size() - 1;
-               // Species pop = Pool.species.get((val));
-               // double generationFitness = 0;
-               // for(Genome agent : pop.genomes){
-               //     System.out.println(pop.genomes.size());
-               //     if(generationFitness < agent.fitness)
-               //         generationFitness = agent.fitness;
-               // }
-                writer.write(genNum + "," + Pook.totalFitness + "\n");
+                writer.write(genNum + "," + val + "\n");
                 writer.flush();
             }
             catch(IOException ex){
             }
+            genNum++;
+            val = 0;
 //            catch(InterruptedException ex){}
-            if(genNum == 100){
-                System.out.println(" Boobies aduasdhsabfhjdshjfdbhfjsndhfagbsajfsghfnsdhfabasjfsavhfnsahfbshjfbshkafbadshjfbsahdjf" +
-                        "\nfsbadhfabhfdbsahfbasdhfbsadhjfbadshkfbdsajhfbsahjfbashafbsdjhfbsajafnjsadfdsjafndsajfbsadfnashjfbasl");
+            if(genNum == 10){
+                System.out.println(" Boobies ");
                 frame.remove(neat);
                 bool = false;
+                genNum = 0;
+                //frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
-            //System.out.println(genNum + "," + Pool.species.topFitness);
-            genNum++;
             Pool.newGeneration();
             initializeGame();
         }
@@ -503,7 +505,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             tubes.add(new Tube(height));
             ticksTubes = 0;
         }
-
+//Change this part
         final Iterator<Tube> it = tubes.iterator();
         while (it.hasNext()) {
             final Tube tube = it.next();
@@ -520,7 +522,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
                 tube.passed = true;
             }
         }
-
+//change this part
         for (final Bird bird : birds) {
             if (bird.dead)
                 continue;

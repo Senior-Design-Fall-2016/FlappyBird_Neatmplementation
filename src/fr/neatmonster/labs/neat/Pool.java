@@ -29,7 +29,7 @@ public class Pool {
 
     public static final Random rnd = new Random();
 
-    public static final List<Species> species    = new ArrayList<>();
+    public static List<Species> species    = new ArrayList<>();
     public static int                 generation = 0;
     public static int                 innovation = OUTPUTS;
     public static double              maxFitness = 0.0;
@@ -74,6 +74,10 @@ public class Pool {
             basic.mutate();
             addToSpecies(basic);
         }
+    }
+
+    public static void destroyPool(){
+        species = new ArrayList<>();
     }
 
     public static void newGeneration() {
@@ -164,7 +168,7 @@ public class Pool {
         species.addAll(survived);
     }
 
-    public static double totalFitness() {
+    public static double totalAverageFitness() {
         double total = 0;
         for (final Species species : Pool.species)
             total += species.averageFitness;
