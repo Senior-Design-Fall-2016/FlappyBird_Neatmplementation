@@ -44,7 +44,7 @@ import static fr.neatmonster.labs.neat.Pool.*;
 
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
-    static int genNum = 0;
+    static int geCnNum = 0;
     static double val = 0.0;
     static double totalVal = 0.0;
     static boolean bool = true;
@@ -315,6 +315,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             System.out.println();
             if(genNum == 25){
                 System.out.println(" Boobies ");
+                writer.write("MaxFitness: " + Pool.maxFitness);
                 frame.remove(neat);
                 bool = false;
                 genNum = 0;
