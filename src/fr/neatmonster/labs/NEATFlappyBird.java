@@ -183,17 +183,33 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         return new Dimension(width, height);
     }
 
-    public static void main(final String[] args) {
+/*
+ * TODO: Dan
+ * Write .csv files out
+ */
+    public static void makeDirectory() {
+        int dirCount = 1;
+        boolean makingDirectory = true;
         date = new Date();
-        //file = new File("GenStats.txt", true);
-        try{
-            writer = new FileWriter("GenStats.txt", true);
-            writer.write(date.toString() + " ----------------------------------------- \n");
-            writer.flush();
-        }
-        catch(IOException ex){
-        }
+        String directoryName = "test_";
 
+        File dir = new File(directoryName + (char) dirCount);
+
+        if (!dir.exists()) {
+            if (dir.mkdir()) {
+                System.out.println("Directory is created!!!!");
+            } else {
+                System.out.println("Failed to create directory :(");
+            }
+        }
+    }
+
+    public static void main(final String[] args) throws Exception {
+        date = new Date();
+
+        writer = new FileWriter("GenStats.txt", true);
+        writer.write(date.toString() + " ----------------------------------------- \n");
+        writer.flush();
 
        // writer.write("Generation,Score");
        // writer.flush();
@@ -512,7 +528,6 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         }
 
         for (final Bird bird : birds) {
-            if (bird.dead)
                 continue;
 
             if (bird.flap) {
