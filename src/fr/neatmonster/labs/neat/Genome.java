@@ -21,6 +21,7 @@ import java.util.Map.Entry;
 public class Genome {
     public Random rand_generator = new Random();
     public final List<Synapse>  genes         = new ArrayList<Synapse>();
+    public boolean              bred          = true;
     public double               fitness       = 0.0;
     public int                  maxNeuron     = 0;
     public int                  globalRank    = 0;
@@ -139,23 +140,26 @@ public class Genome {
         while (prob > 0) {
             if (rnd.nextDouble() < prob)
                 mutateLink(true);
-           /* else{
+            else{
                 //System.out.println("Remove Link");
                 int i = rand_generator.nextInt((genes.size()));
                 removeLink(i);
-            }*/
+            }
             --prob;
         }
 
         prob = mutationRates[3];
+        int i = rand_generator.nextInt((genes.size()));
         while (prob > 0) {
-            if (rnd.nextDouble() < prob)
+            if (rnd.nextDouble() < prob/3)
                 mutateNode();
-            /*else{
+            else if(rnd.nextDouble() < 2*prob/3) {
                 //System.out.println("Remove Node");
-                int i = rand_generator.nextInt((genes.size()));
                 removeNode(i);
-            }*/
+            }
+            else{
+                splitNode(i);
+            }
             --prob;
         }
 
@@ -226,6 +230,33 @@ public class Genome {
                 gene.output = output;
             }
         }
+    }
+    public void splitNode(int i){
+        Synapse node1 = genes.get(i);
+        Synapse node2 = node1;
+
+        node1.innovation = ++Pool.innovation; node1.weight = 1.0;
+        node2.innovation = ++Pool.innovation; node2.weight = 1.0;
+
+
+        /*link adding
+        final int neuron1 = randomNeuron(false, true);
+        final int neuron2 = randomNeuron(true, false);
+
+        final Synapse newLink = new Synapse();
+        newLink.input = neuron1;
+        newLink.output = neuron2;
+
+        if (forceBias)
+            newLink.input = INPUTS - 1;
+
+        if (containsLink(newLink))
+            return;
+
+        newLink.innovation = ++Pool.innovation;
+        newLink.weight = rnd.nextDouble() * 4.0 - 2.0;
+
+        genes.add(newLink);*/
     }
     public void mutateNode() {
         if (genes.isEmpty())

@@ -7,32 +7,32 @@ import java.util.List;
 import java.util.Random;
 
 public class Pool {
-    public static final int POPULATION    = 10;
+    public static final int POPULATION = 50;
     public static final int STALE_SPECIES = 15;
-    public static final int INPUTS        = 4;
-    public static final int OUTPUTS       = 1;
-    public static final int TIMEOUT       = 20;
+    public static final int INPUTS = 4;
+    public static final int OUTPUTS = 1;
+    public static final int TIMEOUT = 20;
 
-    public static final double DELTA_DISJOINT  = 2.0;
-    public static final double DELTA_WEIGHTS   = 0.4;
+    public static final double DELTA_DISJOINT = 2.0;
+    public static final double DELTA_WEIGHTS = 0.4;
     public static final double DELTA_THRESHOLD = 1.0;
 
-    public static final double CONN_MUTATION    = 0.25;
-    public static final double LINK_MUTATION    = 2.0;
-    public static final double BIAS_MUTATION    = 0.4;
-    public static final double NODE_MUTATION    = 0.5;
-    public static final double ENABLE_MUTATION  = 0.2;
+    public static final double CONN_MUTATION = 0.25;
+    public static final double LINK_MUTATION = 2.0;
+    public static final double BIAS_MUTATION = 0.4;
+    public static final double NODE_MUTATION = 0.5;
+    public static final double ENABLE_MUTATION = 0.2;
     public static final double DISABLE_MUTATION = 0.4;
-    public static final double STEP_SIZE        = 0.1;
-    public static final double PERTURBATION     = 0.9;
-    public static final double CROSSOVER        = 0.75;
+    public static final double STEP_SIZE = 0.1;
+    public static final double PERTURBATION = 0.9;
+    public static final double CROSSOVER = 0.75;
 
     public static final Random rnd = new Random();
 
-    public static List<Species> species    = new ArrayList<>();
-    public static int                 generation = 0;
-    public static int                 innovation = OUTPUTS;
-    public static double              maxFitness = 0.0;
+    public static List<Species> species = new ArrayList<>();
+    public static int generation = 0;
+    public static int innovation = OUTPUTS;
+    public static double maxFitness = 0.0;
 
     public static void addToSpecies(final Genome child) {
         for (final Species species : Pool.species)
@@ -76,7 +76,7 @@ public class Pool {
         }
     }
 
-    public static void destroyPool(){
+    public static void destroyPool() {
         species = new ArrayList<>();
     }
 
@@ -102,6 +102,8 @@ public class Pool {
                     .get(rnd.nextInt(Pool.species.size()));
             children.add(species.breedChild());
         }
+        for ( Genome child : children)
+            child.bred = false;
         for (final Genome child : children)
             addToSpecies(child);
         ++generation;

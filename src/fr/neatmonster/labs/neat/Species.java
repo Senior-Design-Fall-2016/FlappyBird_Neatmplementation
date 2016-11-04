@@ -12,11 +12,24 @@ public class Species {
     public double             averageFitness = 0.0;
     public int                staleness      = 0;
 
-    public Genome breedChild() {
+    public Genome breedChild() {//added Code
         final Genome child;
+        //System.out.print("++   ");
         if (rnd.nextDouble() < CROSSOVER) {
-            final Genome g1 = genomes.get(rnd.nextInt(genomes.size()));
-            final Genome g2 = genomes.get(rnd.nextInt(genomes.size()));
+            Genome g1 = new Genome();
+            Genome g2 = new Genome();
+
+            for(Genome g : genomes){
+                if(g1.fitness < g.fitness  && !g.bred){
+                    g1 = g;
+                }
+            }
+            for(Genome g : genomes){
+                if((g2.fitness < g.fitness) &&  (g1 != g2) && !g.bred) {
+                    g2 = g;
+                }
+            }
+
             child = crossover(g1, g2);
         } else
             child = genomes.get(rnd.nextInt(genomes.size())).clone();
@@ -30,7 +43,14 @@ public class Species {
             total += genome.globalRank;
         averageFitness = total / genomes.size();
     }
-
+    public void writeOutGraphs(){
+        for(Genome gene : genomes){
+            for(Synapse syn : gene.genes){
+                System.out.print(syn.input + " " + syn.output + " "  + syn.weight + " " + syn.enabled
+                        + syn.innovation);
+            }
+        }
+    }
     public Genome crossover(Genome g1, Genome g2) {
         if (g2.fitness > g1.fitness) {
             final Genome tmp = g1;

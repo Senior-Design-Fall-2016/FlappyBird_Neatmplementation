@@ -1,3 +1,4 @@
+
 package fr.neatmonster.labs;
 
 import java.awt.BasicStroke;
@@ -57,7 +58,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         private static Map<Species, BufferedImage[]> cache = new WeakHashMap<Species, BufferedImage[]>();
 
         private static BufferedImage colorBird(final BufferedImage refImage,
-                final Color color) {
+                                               final Color color) {
             final BufferedImage image = new BufferedImage(BIRD_WIDTH,
                     BIRD_HEIGHT, BufferedImage.TYPE_INT_ARGB);
             final Color bright = color.brighter().brighter();
@@ -161,12 +162,12 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             final BufferedImage birdImage = ImageIO.read(new File("bird.png"));
             BIRD_IMAGES = new BufferedImage[] {
                     upscale(birdImage),
-                  upscale(birdImage),
-                  upscale(birdImage)
+                    upscale(birdImage),
+                    upscale(birdImage)
             };
-                    //upscale(birdImage.getSubimage(0, 0, 36, 26)),
-                    //upscale(birdImage.getSubimage(36, 0, 36, 26)),
-                    //upscale(birdImage.getSubimage(72, 0, 36, 26)) };
+            //upscale(birdImage.getSubimage(0, 0, 36, 26)),
+            //upscale(birdImage.getSubimage(36, 0, 36, 26)),
+            //upscale(birdImage.getSubimage(72, 0, 36, 26)) };
             TUBE1_IMAGE = upscale(ImageIO.read(new File("tube1.png")));
             TUBE2_IMAGE = upscale(ImageIO.read(new File("tube2.png")));
             FONT = Font.createFont(Font.TRUETYPE_FONT,
@@ -177,7 +178,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
     }
 
     public static Dimension getBounds(final Graphics2D g, final Font font,
-            final String text) {
+                                      final String text) {
         final int width = (int) font
                 .getStringBounds(text, g.getFontRenderContext()).getWidth();
         final int height = (int) font
@@ -186,7 +187,7 @@ public class NEATFlappyBird extends JPanel implements Runnable {
         return new Dimension(width, height);
     }
     public static void main(final String[] args) {
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 10; i++) {// Titties
             bool = true;
             date = new Date();
             //file = new File("GenStats.txt", true);
@@ -311,11 +312,13 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             genNum++;
             val = 0;
 //            catch(InterruptedException ex){}
-            if(genNum == 10){
+            System.out.println();
+            if(genNum == 25){
                 System.out.println(" Boobies ");
                 frame.remove(neat);
                 bool = false;
                 genNum = 0;
+                Pool.maxFitness = 0.0;
                 //frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             Pool.newGeneration();
