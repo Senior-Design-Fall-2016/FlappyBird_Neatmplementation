@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Pool {
     public static final int POPULATION = 50;
-    public static final int STALE_SPECIES = 15;
+    public static final int STALE_SPECIES = 1;
     public static final int INPUTS = 4;
     public static final int OUTPUTS = 1;
     public static final int TIMEOUT = 20;

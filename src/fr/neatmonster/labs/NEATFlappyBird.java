@@ -1,4 +1,3 @@
-
 package fr.neatmonster.labs;
 
 import java.awt.BasicStroke;
@@ -44,7 +43,7 @@ import static fr.neatmonster.labs.neat.Pool.*;
 
 @SuppressWarnings("serial")
 public class NEATFlappyBird extends JPanel implements Runnable {
-    static int geCnNum = 0;
+    static int genNum = 0;
     static double val = 0.0;
     static double totalVal = 0.0;
     static boolean bool = true;
@@ -306,24 +305,25 @@ public class NEATFlappyBird extends JPanel implements Runnable {
             try{
                 writer.write(genNum + "," + val + "\n");
                 writer.flush();
-            }
-            catch(IOException ex){
-            }
-            genNum++;
-            val = 0;
+                genNum++;
+                val = 0;
 //            catch(InterruptedException ex){}
-            System.out.println();
-            if(genNum == 25){
-                System.out.println(" Boobies ");
-                writer.write("MaxFitness: " + Pool.maxFitness);
-                frame.remove(neat);
-                bool = false;
-                genNum = 0;
-                Pool.maxFitness = 0.0;
-                //frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                System.out.println();
+                if(genNum == 25){
+                    System.out.println(" Boobies ");
+                    writer.write("MaxFitness: " + Pool.maxFitness);
+                    writer.flush();
+                    frame.remove(neat);
+                    bool = false;
+                    genNum = 0;
+                    Pool.maxFitness = 0.0;
+                    //frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                }
+                Pool.newGeneration();
+                initializeGame();
             }
-            Pool.newGeneration();
-            initializeGame();
+            catch(IOException ex) {
+            }
         }
     }
 
